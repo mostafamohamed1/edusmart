@@ -1,0 +1,32 @@
+nav.navbar.navbar-expand-lg.p-lg-0
+  .container
+    a.navbar-brand(href='#'): img(src="imgs/logo.png", alt="logo", class="img-fluid")
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNavDropdown.collapse.navbar-collapse.align-items-center
+      ul.navbar-nav.ms-lg-auto
+        li.nav-item.me-3
+          a.nav-link.active.text-uppercase(aria-current='page' href='#') Home
+        li.nav-item.me-3
+          a.nav-link.text-uppercase(href='#') About
+        li.nav-item.me-3
+          a.nav-link.text-uppercase(href='#') Pages
+          ul.inner-list
+            li 
+              a.text-uppercase.inner-item(href="#") Courses 
+            li 
+              a.text-uppercase.inner-item(href="#") Courses Details
+            li 
+              a.text-uppercase.inner-item(href="#") Elements 
+        li.nav-item.me-3
+          a.nav-link.text-uppercase(href='#') Blogs
+          ul.inner-list
+            li 
+              a.text-uppercase.inner-item(href="#") Blog 
+            li 
+              a.text-uppercase.inner-item(href="#") Blog Details
+        li.nav-item.me-3
+          a.nav-link.text-uppercase(href='#') Contact
+        li.nav-item.me-3
+          a.nav-link.text-uppercase.ms-lg-5#search(href='#') 
+            span.lnr.lnr-magnifier.d-flex.align-items-center

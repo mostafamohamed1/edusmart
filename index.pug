@@ -1,0 +1,174 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title EduSmart
+    
+    include ./pug/_styles.pug
+  body 
+    //- Start Header
+    header.header_area 
+      .header-top.d-none.d-lg-block
+        .container 
+          .row.align-items-center
+            .col-lg-6.col-sm-6.col-4.header-top-left
+              a(href="tel:+01234567890") 
+                span.lnr.lnr-phone 
+                span.text +01234567890
+              a(href="mailto:support@colorlib.com")
+                span.lnr.lnr-envelope
+                span.text support@colorlib.com
+            .col-lg-6.col-sm-6.col-4.header-top-right 
+              a.text-uppercase(href="#") Login
+
+      .main_menu
+        .search_input#search_input_box 
+          .container 
+            form.d-flex.justify-content-between
+              input(type="text", class="form-control", id="search_input", placeholder="Search Here")
+              button(type="submit",class="btn")
+              span.close.lnr.lnr-cross#close_search(title="Close Search")
+        include ./pug/_nav.pug 
+    //- End Header
+
+    //- Start Landing
+    include ./pug/_land.pug
+    //- End Landing
+
+    //- Start Feature
+    include ./pug/_feature.pug
+    //- End Feature
+
+    //- Start Department
+    include ./pug/_department.pug
+    //- End Department
+
+    //- Start Popular Courses
+    include ./pug/_popular_courses.pug
+    //- End Popular Courses
+
+    //- Start Fact
+    include ./pug/_fact.pug
+    //- End Fact
+
+    //- Start Testimonials
+    include ./pug/_testimonials.pug
+    //- End Testimonials
+
+    //- Start Register
+    section.register 
+      .container 
+        .row.align-items-center 
+          .col-lg-7 
+            .row.clock_sec.clockdiv#clockdiv.mb-5
+              .col-lg-12 
+                h2 Register Now 
+                p There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.
+              .col.clockinner1.clockinner 
+                h2.days 30
+                span.smalltext Days
+              .col.clockinner1.clockinner 
+                h2.hour 12
+                span.smalltext Hour
+              .col.clockinner1.clockinner 
+                h2.mins 10
+                span.smalltext Mins
+              .col.clockinner1.clockinner 
+                h2.secs 18
+                span.smalltext Secs
+          .col-lg-4.offset-lg-1
+            .register-form
+              h3.text-center Courses for free 
+              p.text-center It is high time for learning
+              form.form_area(action="")
+                .row 
+                  .col-lg-12.form_group 
+                    input(type="text" name="name" placeholder="Your name" required )
+                    input(type="tel" name="tel" placeholder="Your phone number" required )
+                    input(type="email" name="email" placeholder="Your email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required )
+                  .col-lg-12.text-center
+                    button.primary-btn.btn-grad.submit-btn Submit
+
+    //- End Register
+
+    //- Start Events
+    section.events 
+      .container 
+        .main-title.text-center 
+          h2 Upcoming Events
+          p There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.
+        .row 
+          .col-lg-6
+            .single-event 
+              .row.align-items-center 
+                .col-lg-6.col-lg-5 
+                  .event-thumb  
+                    img(src="imgs/event1.webp", alt="event", class="img-fluid")
+                .col-lg-5.col-md-7 
+                  .event-details 
+                    p 25th February, 2017
+                    h4: a(href="#") The Universe Through A Child S Eyes
+                    p Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do eiusmod tempor incididunt labore dolorsit.
+          .col-lg-6
+            .single-event 
+              .row.align-items-center 
+                .col-lg-6.col-lg-5 
+                  .event-thumb  
+                    img(src="imgs/event2.webp", alt="event", class="img-fluid")
+                .col-lg-5.col-md-7 
+                  .event-details 
+                    p 25th February, 2017
+                    h4: a(href="#") The Universe Through A Child S Eyes
+                    p Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed do eiusmod tempor incididunt labore dolorsit amet consec tetur adipisicing elit sed.
+    //- End Events
+
+    //- Start Footer
+    footer 
+      .container 
+        .footer-head 
+          .row 
+            .col-lg-2.col-md-6.mt-5
+              h4 Top Products
+              ul 
+                li: a(href="#") Managed Website
+                li: a(href="#") Manage Reputation
+                li: a(href="#") Power Tools
+                li: a(href="#") Marketing Service
+            .col-lg-2.col-md-6.mt-5
+              h4 Quick Links
+              ul 
+                li: a(href="#") Jobs 
+                li: a(href="#") Brand Assets
+                li: a(href="#") Investor Relations
+                li: a(href="#") Terms of Service
+            .col-lg-2.col-md-6.mt-5
+              h4 Features
+              ul 
+                li: a(href="#") Jobs 
+                li: a(href="#") Brand Assets
+                li: a(href="#") Investor Relations
+                li: a(href="#") Terms of Service
+            .col-lg-2.col-md-6.mt-5
+              h4 Resources
+              ul 
+                li: a(href="#") Guides
+                li: a(href="#") Research
+                li: a(href="#") Experts
+                li: a(href="#") Agencies
+            .col-lg-4.col-md-6.mt-5
+              h4 Newsletter
+              p You can trust us. we only send promo offers,
+              form.newsletter(action="#")
+                input.form-control(name="EMAIL", placeholder="Your Email Address...", required, type="email")
+                button.btn-grad Subscribe
+        .footer-foot 
+          .row.align-items-center 
+            .col-lg-8.col-md-12
+              p Copyright &copy; 2018 All rights reserved | This template is made with ❤️ by 
+                a(href="#") Colorlib
+
+    //- End Footer
+    script(src="http://localhost:35729/livereload.js") 
+    script(src="js/main.js") 
